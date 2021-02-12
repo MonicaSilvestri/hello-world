@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>FlipForte</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!--First page - where the user picks the file-->
+    <div id="fchoose" class="base">
+        <div id="titletxt"><h1>FlipForte</h1></div>
+        <div id="imageback"></div>
+        <div id="pathcontainer">
+            <input type="text" id="path" placeholder="C:\please\enter\path\to\file.pdf">
+            <button id="submitpath" onclick="openFile()">❯</button>
+        </div>
+    </div>
+
+    <!--Second page - where the PDF will show up-->
+    <div id="fshow" class="base">
+        <table>
+            <tr>
+                <td class="sidebar">
+                    <button class="pager" onclick="showPrevPage()">❮</button>
+                </td>
+
+                <td class="mainpanel">
+                    <div class="controlbar">
+                        <p id="controltext">Page <input type="text" id="cpage" onchange="setPage(value)"> of <span id="npages">0</span></p>
+                    </div>
+
+                    <div id="renderDest">
+                        <canvas id="pdfrender"></canvas>
+                    </div>
+
+                    <div class="controlbar">
+                        <input type="range" min="0.5" max="2.5" value="1" step="0.025" onchange="changeScale(value)">
+                    </div>
+                </td>
+
+                <td class="sidebar">
+                    <button class="pager" onclick="showNextPage()">❯</button>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    <!--PDF rendering library from Apache-->
+    <script type="text/javascript" src="jslib/pdf.js"></script>
+    <!--Page functionality-->
+    <script type="text/javascript" src="jslib/main.js"></script>
+    <!--
+        Licensing:
+        - Electron:     ./licenses/electron.txt
+        - FlipForte:    ./licenses/gpl3.txt
+        - PDF.JS:       ./licenses/pdfjs.txt
+    -->
+</body>
+
+</html>
