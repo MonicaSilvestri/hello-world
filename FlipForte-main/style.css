@@ -1,0 +1,202 @@
+:root {
+    --ffred: #420F0A;
+    --ffwhite: #FBF6F1;
+    --ffblack: #0d0907;
+    font-size: 16px;
+}
+
+*{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: var(--ffred);
+    user-select: none; /*Remove this if you can't interact with the page*/
+}
+
+body {
+    margin: 0;
+    border: 0;
+    padding: 0;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+table {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    border-collapse: collapse;
+}
+
+.base {
+    display: block;
+    margin: 0;
+    background-color: var(--ffwhite);
+    border: 0.5rem solid var(--ffred);
+    overflow: hidden;
+}
+
+.sidebar {
+    width: 5rem;
+    min-width: 3rem;
+    padding: 0;
+}
+
+.controlbar {
+    width: 100%;
+    height: 2rem;
+    text-align: center;
+}
+
+.mainpanel {
+    width: -webkit-fill-available;
+    min-width: 20rem;
+}
+
+.pager {
+    height: 100%;
+    width: 100%;
+    background: var(--ffwhite);
+    color: var(--ffred);
+    font-size: 3rem;
+    border: none;
+    box-shadow: inset 0px 0px 10px -5px var(--ffblack);
+    cursor: pointer;
+}
+
+#cpage {
+    border: none;
+    margin: 0;
+    background-color: var(--ffwhite);
+    box-shadow: inset 0px 0px 10px -5px var(--ffblack);
+    padding-left: 0.1rem;
+    padding-right: 0.1rem;
+    padding-top: 0.1rem;
+    padding-bottom: 0.1rem;
+    height: 1.1rem;
+    width: 2rem;
+    text-align: center;
+}
+
+#fchoose {
+    height: calc(100vh - 5rem);
+    max-height: calc(100vh - 5rem);
+    min-height: calc(100vh - 5rem);
+    width: calc(100vw - 5rem);
+    max-width: calc(100vw - 5rem);
+    min-width: calc(100vw - 5rem);
+    padding: 2rem;
+    cursor: crosshair;
+}
+
+#fshow {
+    height: calc(100vh - 1rem);
+    max-height: calc(100vh - 1rem);
+    min-height: calc(100vh - 1rem);
+    width: calc(100vw - 1rem);
+    max-width: calc(100vw - 1rem);
+    min-width: calc(100vw - 1rem);
+    padding: 0;
+    cursor: crosshair;
+}
+
+#renderDest {
+    display: block;
+    text-align: center;
+    height: calc(100% - 4rem);
+    width: 100%;
+    padding-top: 1rem;
+    overflow: auto;
+}
+
+#pdfrender {
+    display: block;
+    margin: auto;
+    box-shadow: 0px 0px 10px -5px var(--ffblack);
+    border-radius: 0.5rem;
+}
+
+#controltext {
+    margin: 0;
+    padding-top: 0.5rem;
+}
+
+/*Slider Styles*/
+input[type=range] {
+    -webkit-appearance: none;
+    outline: none;
+    background: none;
+    display: inline-block;
+    width: calc(100% - 2rem);
+    margin: 0.5rem;
+}
+input[type=range]::-webkit-slider-runnable-track {
+    width: 100%;
+    height: 1rem;
+    cursor: pointer;
+    background: var(--ffwhite);
+    box-shadow: inset 0px 0px 10px -5px var(--ffblack);
+}
+input[type=range]::-webkit-slider-thumb {
+    height: 1rem;
+    width: 2rem;
+    background: var(--ffred);
+    cursor: pointer;
+    -webkit-appearance: none;
+}
+
+/*Front page style*/
+#titletxt {
+    display: block;
+    height: 15rem;
+    width: 100%;
+    text-align: center;
+}
+#titletxt h1 {
+    font-size: 7rem;
+    margin: 0;
+    margin-bottom: 1rem;
+    user-select: none;
+}
+
+#imageback {
+    display: block;
+    height: calc(100% - 30rem);
+    width: 100%;
+    background-image: url("../resources/logonoback.png");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#pathcontainer {
+    display: block;
+    height: 5rem;
+    padding: 6rem;
+    width: calc(100% - 12rem);
+    text-align: center;
+}
+#path {
+    border: none;
+    margin: 0;
+    background-color: var(--ffwhite);
+    box-shadow: inset 0px 0px 10px -5px var(--ffblack);
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-top: 0.1rem;
+    padding-bottom: 0.1rem;
+    height: 2rem;
+    width: 40rem;
+}
+#submitpath {
+    border: none;
+    margin: 0;
+    background-color: var(--ffred);
+    color: var(--ffwhite);
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-top: 0rem;
+    padding-bottom: 0rem;
+    height: 2.2rem;
+    cursor: pointer;
+}
